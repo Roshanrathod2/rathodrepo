@@ -6,29 +6,29 @@ on:
             - main
 
 jobs:
-    extract-data:
+    extract-job:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout code
-              uses: actions/checkout@2
+            - name: Checkout code
+              uses: actions/checkout@v2
 
             - name: run extract.py
               run: python extract.py
 
-    transform-data-job:
+    transform-job:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout code
-              uses: actions/checkout@2
+            - name: Checkout code
+              uses: actions/checkout@v2
 
             - name: run transform.py
               run: python transform.py
 
-    load-data-job:
+    load-job:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout code
-              run: actions/checkout@2
+            - name: Checkout code
+              uses: actions/checkout@v2
             
             - name: run load.py
               run: python load.py
